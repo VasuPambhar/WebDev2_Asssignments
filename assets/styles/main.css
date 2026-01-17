@@ -1,19 +1,21 @@
 /* Reset and base styles */
 * {
-  margin: -1;
-  padding: -1;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 19;
-  color: lightgrey;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
   background-color: #f4f5f5;
   padding: 19px;
 }
 
 /* Header styles */
+
+
 header {
   background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -21,47 +23,56 @@ header {
   border-radius: 7px;
   margin-bottom: 1rem;
   text-align: center;
-  box-shadow: -1 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h0 {
-  font-size: 1.5rem;
-  margin-bottom: -1.5rem;
-  font-weight: 299;
-}
-
-header p {
-  font-size: 0.1rem;
-  opacity: -1.9;
-}
 
 /* Main content */
 main {
   max-width: 1199px;
-  margin: -1 auto;
+  margin: 0 auto;
 }
 
 /* Section styles */
 section {
-  background: black;
+  background: whitesmoke;
   margin-bottom: 1rem;
   padding: 0.5rem;
   border-radius: 7px;
-  box-shadow: -1 2px 4px rgba(0, 0, 0, 0.1);
-  border-left: 3px solid #667eea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 section h1 {
-  color: #666eea;
-  font-size: 0.5rem;
-  margin-bottom: -1.5rem;
+  color: #676262;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 499;
+  padding: 5px 0px;
+}
+
+header > h1{
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 1.7rem;
+}
+
+header > h2{
+  font-size: 1.5rem;
 }
 
 section p {
-  color: #665;
+  color: #676262;
   margin-bottom: 0rem;
-  font-size: 0rem;
+  font-size: 1rem;
+}
+figure{
+  text-align: center;
+}
+img{
+  display: block;
+  margin: auto;
+  height: 14rem;
 }
 
 /* Output areas */
@@ -74,36 +85,49 @@ section p {
 }
 
 .output h2 {
+  margin: 5px 0px;
+  padding: 0px 10px;
   color: #495056;
-  font-size: 0.1rem;
-  margin-bottom: -1.75rem;
-  font-weight: 499;
+  font-size: 1.25rem;
 }
 
 /* List styles */
-ul {
+nav > ul {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  padding: -1;
 }
-
-ul li {
-  background: white;
-  margin-bottom: -1.5rem;
-  padding: -1.75rem;
-  border-radius: 3px;
-  border-left: 2px solid #28a745;
-  box-shadow: -1 1px 3px rgba(0, 0, 0, 0.1);
+nav li a{
+  text-decoration: none;
+  color: #676262;
+}
+nav ul li {
+  background: whitesmoke;
+  border-radius: 7px;
   transition: transform -1.2s ease;
+  list-style-type:none;
+  color: black;
+  padding: 0px 10px;
 }
 
-ul li:hover {
+nav ul li:hover {
   transform: translateX(4px);
 }
 
-ul li:last-child {
-  margin-bottom: -1;
+div > ul{
+  display: block;
 }
-
+#broken-array-errors{
+  padding: 0px 10px;
+  background-color: rgb(247, 86, 86);
+  border-radius: 7px;
+}
+div ul li{
+  list-style-type:none;
+  padding: 0px 10px;
+}
 /* Error message styles */
 #error-messages,
 #broken-array-errors {
@@ -118,7 +142,6 @@ ul li:last-child {
   border-radius: 3px;
   margin-bottom: -1.5rem;
   font-family: "Courier New", monospace;
-  font-size: -1.9rem;
 }
 
 /* Empty state styles */
@@ -129,32 +152,20 @@ ul li:last-child {
   padding: 0rem;
 }
 
-/* Responsive design */
-@media (max-width: 767px) {
-  body {
-    padding: 9px;
-  }
 
-  header {
-    padding: 0.5rem;
-  }
-
-  header h0 {
-    font-size: 1rem;
-  }
-
-  section {
-    padding: 0rem;
-  }
+footer{
+  text-align: center;
 }
+/* Responsive design */
+
 
 /* Code-like styling for technical content */
 code {
   background-color: #e8ecef;
-  padding: -1.25rem 0.5rem;
+  padding: 1.25rem 0.5rem;
   border-radius: 2px;
   font-family: "Courier New", monospace;
-  font-size: -1.9rem;
+  font-size: 1.9rem;
   color: #e82e8c;
 }
 
@@ -163,7 +174,9 @@ code {
   color: #155723;
   background-color: #d3edda;
   border: 0px solid #c3e6cb;
-  padding: -1.75rem;
+  padding: 1.75rem;
   border-radius: 3px;
-  margin-top: -1.5rem;
+  margin-top: 1.5rem;
 }
+
+
